@@ -1,6 +1,6 @@
 package br.com.vainaweb.escola.enums;
 
-public enum EstadoBrasileiro {
+public enum BrazilianStates {
 
     ACRE("Acre", "AC"),
     ALAGOAS("Alagoas", "AL"),
@@ -30,15 +30,15 @@ public enum EstadoBrasileiro {
     TOCANTINS("TOCANTIS", "TO"),
     BRASILIA ("Distrito Federal", "DF");
 
-    private String nome;
-    private String sigla;
+    private String name;
+    private String initial;
 
-    private EstadoBrasileiro (String nome, String sigla) {
-        this.nome = nome;
-        this.sigla = sigla;
+    private BrazilianStates(String name, String initial) {
+        this.name = name;
+        this.initial = initial;
     }
 
     public String getNomeMaiusculo() {
-        return nome.toUpperCase();
+        return name.toUpperCase();
     }
 }

@@ -1,4 +1,9 @@
 package br.com.vainaweb.escola.dto;
 
-public record ColaboradorResponseDTO(Long id, String nome, String cpf, String endereco) {
+import br.com.vainaweb.escola.enums.Profession;
+import br.com.vainaweb.escola.enums.Department;
+import br.com.vainaweb.escola.model.Address;
+
+public record ColaboradorResponseDTO(Long id, String nome, String email, String cpf, Address address,
+                                     Profession profession, Department department) {
 }

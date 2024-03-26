@@ -1,5 +1,6 @@
 package br.com.vainaweb.escola.service;
 
+import br.com.vainaweb.escola.dto.ColaboradorRequestDTO;
 import br.com.vainaweb.escola.dto.ColaboradorResponseDTO;
 import br.com.vainaweb.escola.model.ColaboradorModel;
 import br.com.vainaweb.escola.repository.ColaboradorRepository;
@@ -21,5 +22,14 @@ public class ColaboradorService {
 
     public List<ColaboradorModel> listarTodos() {
         return colaboradorRepository.findAll();
+    }
+
+    public void cadastrar(ColaboradorRequestDTO dados) {
+        var colaborador = new ColaboradorModel(
+                dados.name(), dados.cpf(), dados.email(),
+                dados.profession(), dados.department()
+        );
+
+        colaboradorRepository.save(colaborador);
     }
 }

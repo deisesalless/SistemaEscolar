@@ -1,6 +1,6 @@
 package br.com.vainaweb.escola.enums;
 
-public enum Cargo {
+public enum Profession {
     PROFESSOR("Professor(a)"),
     INSPETOR("Inspetor(a)"),
     COORDENADOR("Coordernador(a) Pedagogico"),
@@ -11,13 +11,13 @@ public enum Cargo {
     MERENDEIRO("Merendeiro(a)"),
     PORTEIRO("Porteiro(a)");
 
-    private String nome;
+    private String name;
 
-    private Cargo(String nome) {
-        this.nome = nome;
+    private Profession(String name) {
+        this.name = name;
     }
 
     public String getNomeMaiusculo() {
-        return nome.toUpperCase();
+        return name.toUpperCase();
     }
 }

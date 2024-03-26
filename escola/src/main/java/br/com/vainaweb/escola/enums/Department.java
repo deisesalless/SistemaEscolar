@@ -1,6 +1,6 @@
 package br.com.vainaweb.escola.enums;
 
-public enum Setor {
+public enum Department {
     GESTAO_ESCOLAR("Gestao Escolar"),
     COORDENACAO_ADMINISTRATIVA("Coordenacao Administrativo Escolar"),
     COORDERNACAO_PEDAGOGICA("Coordenacao Pedagogico Escolar"),
@@ -8,13 +8,13 @@ public enum Setor {
     SECRETARIA("Secretaria Escolar"),
     ADMINISTRATIVO("Administracao Escolar");
 
-    private String nome;
+    private String name;
 
-    private Setor(String nome) {
-        this.nome = nome;
+    private Department(String name) {
+        this.name = name;
     }
 
     public String getNomeMaiusculo() {
-        return nome.toUpperCase();
+        return name.toUpperCase();
     }
 }
